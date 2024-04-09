@@ -22,6 +22,7 @@ while True:
     # Переменная для отслеживания текущего положения глаз
     current_position = None
 
+    # Выделяем прямоугольниками область глаз
     for (ex, ey, ew, eh) in eyes:
         cv2.rectangle(frame, (ex, ey), (ex + ew, ey + eh), (255, 0, 0), 2)
 
