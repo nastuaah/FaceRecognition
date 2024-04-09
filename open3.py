@@ -43,6 +43,10 @@ while True:
         elif lip_distance >= 1:
             prev_lips_pressed = False
     
+    # Рисуем прямоугольник на области губ
+    x, y, w, h = cv2.boundingRect(np.array(mouth_points))
+    cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
+    
     # Отображение фрейма
     cv2.imshow('Lip Press Detection', frame)
     
